@@ -1,0 +1,25 @@
+@startuml
+
+class Usuario 
+class Mascota {
+    +Pasear()
+    -Felicidad felicidad 
+}
+class Juego{
+    -Mascota mascota
+    -Usuario usuario 
+}
+class Felicidad 
+class Porcentaje{
+    -Numero numero 
+    +Incrementar(numero)
+    +Disminuir(numero)
+}
+
+Usuario o-- Mascota 
+Mascota *-- Felicida 
+Juego *-- Usuario 
+Juego *-- Mascota 
+Felicidad --|> Porcentaje
+Porcentaje *-- Numero 
+
