@@ -10,18 +10,32 @@ public:
     }
     Porcentaje(int numero)
     {
-        if (numero > 100 || numero < 100)
+        if (numero > 100 || numero <0)
         {
-            /* code */
+            throw new std::runtime_error("Numero fuera de rango.");
         }
         else
         {
-            /* code */
+            this -> numero = numero;
         }
+        
+ 
     }
-    ~Porcentaje()
+    ~Porcentaje(){}
+    void Incrementar(int numero)
     {
+        this->numero+=numero;
     }
-    void Incrementar(int numero) {}
-    void Disminuir(int numero) {}
+    void Disminuir(int numero)
+    {
+        this->numero-=numero;
+    }
+Porcentaje operator +(Porcentaje p1){
+    return this->numero + p1.numero;
+    }
+    int imprimir()
+    {
+        return this->numero;
+    }
+
 };

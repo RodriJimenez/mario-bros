@@ -1,4 +1,4 @@
-@startuml
+@startuml nombre
 
 class Usuario 
 class Mascota {
@@ -15,6 +15,7 @@ class Porcentaje{
     +Incrementar(numero)
     +Disminuir(numero)
 }
+class Numero 
 
 Usuario o-- Mascota 
 Mascota *-- Felicida 
