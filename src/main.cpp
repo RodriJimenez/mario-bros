@@ -9,9 +9,9 @@ int main(){
     Porcentaje foco2;
     Porcentaje foco3;
 
-    focos.emplace_bake(foco1);
-    focos.emplace_bake(foco2);
-    focos.emplace_bake(foco3);
+    focos.emplace_back(foco1);
+    focos.emplace_back(foco2);
+    focos.emplace_back(foco3);
 
     for(auto &&f: focos){
         f.Incrementar(10);
